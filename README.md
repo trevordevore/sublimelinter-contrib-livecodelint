@@ -10,7 +10,7 @@ SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 
 
 ### LiveCode Package Installation
 
-You will need to install the [LiveCode Package](livecode-package) before installing the linter.
+You will need to install the [LiveCode Package][livecode-package] before installing the linter.
 
 ### Linter installation
 Before using this plugin, you must ensure that `livecodelint` is installed on your system. To install `livecodelint`, do the following:
@@ -43,7 +43,7 @@ After adding these two settings to your user settings file the `livecodelint` se
 
 ## Notes
 
-The livecodelint.lc file was taken from the [LiveCode language package for Atom](livecode-atom)
+The livecodelint.lc file was taken from the [LiveCode language package for Atom][livecode-atom]
 
 ## Contributing
 If you would like to contribute enhancements or fixes, please do the following:
