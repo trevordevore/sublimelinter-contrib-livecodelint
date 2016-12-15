@@ -37,11 +37,13 @@ After adding these two settings to your user settings file the `livecodelint` se
     "args": [],
     "excludes": [],
     "explicitvars": true,
-    "livecode-server-path": "/Users/username/development/livecode-community-server"
+    "livecode-server-path": "/usr/local/bin/livecode-community-server"
 }
 ```
 
-Make sure and add these variables 
+## Notes
+
+The livecodelint.lc file was taken from the [LiveCode language package for Atom](livecode-atom)
 
 ## Contributing
 If you would like to contribute enhancements or fixes, please do the following:
@@ -50,7 +52,6 @@ If you would like to contribute enhancements or fixes, please do the following:
 1. Hack on a separate topic branch created from the latest `master`.
 1. Commit and push the topic branch.
 1. Make a pull request.
-1. Be patient.  ;-)
 
 Please note that modifications should follow these coding guidelines:
 
@@ -70,3 +71,4 @@ Thank you for helping out!
 [settings]: http://sublimelinter.readthedocs.org/en/latest/settings.html
 [linter-settings]: http://sublimelinter.readthedocs.org/en/latest/linter_settings.html
 [inline-settings]: http://sublimelinter.readthedocs.org/en/latest/settings.html#inline-settings
+[livecode-atom]: https://github.com/peter-b/atom-language-livecode
