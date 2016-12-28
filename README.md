@@ -1,4 +1,4 @@
-SublimeLinter-livecodelint
+SublimeLinter-contrib-livecodelint
 ================================
 
 [![Build Status](https://travis-ci.org/SublimeLinter/SublimeLinter-contrib-livecodelint.svg?branch=master)](https://travis-ci.org/SublimeLinter/SublimeLinter-contrib-livecodelint)
@@ -48,7 +48,7 @@ To install via Package Control, do the following:
 
 1. Within Sublime Text, bring up the [Command Palette][cmd] and type `install`. Among the commands you should see `Package Control: Install Package`. If that command is not highlighted, use the keyboard or mouse to select it. There will be a pause of a few seconds while Package Control fetches the list of available plugins.
 
-2. When the plugin list appears, type `livecodelint`. Among the entries you should see `SublimeLinter-livecodelint`. If that entry is not highlighted, use the keyboard or mouse to select it.
+2. When the plugin list appears, type `livecodelint`. Among the entries you should see `SublimeLinter-contrib-livecodelint`. If that entry is not highlighted, use the keyboard or mouse to select it.
 
 ## Notes
 
@@ -81,5 +81,4 @@ Thank you for helping out!
 [cmd]: http://docs.sublimetext.info/en/sublime-text-3/extensibility/command_palette.html
 [settings]: http://sublimelinter.readthedocs.org/en/latest/settings.html
 [linter-settings]: http://sublimelinter.readthedocs.org/en/latest/linter_settings.html
-[inline-settings]: http://sublimelinter.readthedocs.org/en/latest/settings.html#inline-settings
 [livecode-atom]: https://github.com/peter-b/atom-language-livecode
