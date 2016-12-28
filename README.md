@@ -1,9 +1,9 @@
-SublimeLinter-contrib-livecodelint
+SublimeLinter-livecodelint
 ================================
 
 [![Build Status](https://travis-ci.org/SublimeLinter/SublimeLinter-contrib-livecodelint.svg?branch=master)](https://travis-ci.org/SublimeLinter/SublimeLinter-contrib-livecodelint)
 
-This linter plugin for [SublimeLinter][docs] provides an interface to [livecodelint](__linter_homepage__). It will be used with files that have the “__livecode__” syntax.
+This linter plugin for [SublimeLinter][docs] provides an interface for checking syntax for [LiveCode][livecode-homepage]. It will be used with files that are using the “LiveCode” syntax in Sublime Text.
 
 ## Installation
 SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 3 is not installed, please follow the instructions [here][installation].
@@ -12,17 +12,17 @@ SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 
 
 You will need to install the [LiveCode Package][livecode-package] before installing the linter.
 
-### Linter installation
-Before using this plugin, you must ensure that `livecodelint` is installed on your system. To install `livecodelint`, do the following:
+### LiveCode server executable installation
+Before using this plugin, you must ensure that a LiveCode Server executable is installed on your system. To install a version of LiveCode server, do the following:
 
-1. Download the a version of `livecode-community-server` from [http://downloads.livecode.com](http://downloads.livecode.com) and store it somewhere on your computer. You will point the linter to the file in the settings.
-2. Download the files in this repository and place the folder in the Sublime Text 3 user Packages folder. 
+1. Download the version of `livecode-community-server` from [http://downloads.livecode.com](http://downloads.livecode.com) that you would like to use to check syntax. This plugin has been tested with LiveCode 8.
+2. Move the executable to a folder where SublimeLinter will be able to access it. For example, on OS X you might move the `livecode-community-server` file to the `/usr/local/bin` folder.
 3. Configure settings as described below.
 
 ## Settings
 For general information on how SublimeLinter works with settings, please see [Settings][settings]. For information on generic linter settings, please see [Linter Settings][linter-settings].
 
-In addition to the standard SublimeLinter settings, SublimeLinter-contrib-livecodelint provides its own settings. You configure these settings in the SublimeLinter User Settings file.
+In addition to the standard SublimeLinter settings, livecodelint provides its own settings. You configure these settings in the SublimeLinter User Settings file.
 
 |Setting|Description|
 |:------|:----------|
@@ -40,6 +40,15 @@ After adding these two settings to your user settings file the `livecodelint` se
     "livecode-server-path": "/usr/local/bin/livecode-community-server"
 }
 ```
+
+### Plugin installation
+Please use [Package Control][pc] to install the linter plugin. This will ensure that the plugin will be updated when new versions are available. If you want to install from source so you can modify the source code, you probably know what you are doing so we won’t cover that here.
+
+To install via Package Control, do the following:
+
+1. Within Sublime Text, bring up the [Command Palette][cmd] and type `install`. Among the commands you should see `Package Control: Install Package`. If that command is not highlighted, use the keyboard or mouse to select it. There will be a pause of a few seconds while Package Control fetches the list of available plugins.
+
+2. When the plugin list appears, type `livecodelint`. Among the entries you should see `SublimeLinter-livecodelint`. If that entry is not highlighted, use the keyboard or mouse to select it.
 
 ## Notes
 
@@ -62,6 +71,8 @@ Please note that modifications should follow these coding guidelines:
 
 Thank you for helping out!
 
+[livecode-homepage]: https://livecode.org
+[LiveCode]: https://github.com/trevordevore/livecode-sublimetext
 [docs]: http://sublimelinter.readthedocs.org
 [installation]: http://sublimelinter.readthedocs.org/en/latest/installation.html
 [livecode-package]: https://github.com/trevordevore/livecode-sublimetext
