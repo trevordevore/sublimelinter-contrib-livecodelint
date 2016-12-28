@@ -1,7 +1,7 @@
 SublimeLinter-contrib-livecodelint
 ================================
 
-[![Build Status](https://travis-ci.org/SublimeLinter/SublimeLinter-contrib-livecodelint.svg?branch=master)](https://travis-ci.org/SublimeLinter/SublimeLinter-contrib-livecodelint)
+[![Build Status](https://travis-ci.org/trevordevore/sublimelinter-contrib-livecodelint.svg?branch=master)](https://travis-ci.org/trevordevore/sublimelinter-contrib-livecodelint)
 
 This linter plugin for [SublimeLinter][docs] provides an interface for checking syntax for [LiveCode][livecode-homepage]. It will be used with files that are using the “LiveCode” syntax in Sublime Text.
 
