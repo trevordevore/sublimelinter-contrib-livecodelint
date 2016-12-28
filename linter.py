@@ -51,7 +51,7 @@ class Livecodelint(Linter):
         self.livecodelint_path = os.path.dirname(__file__) + '/livecodelint.lc'
 
     def run(self, cmd, code):
-        """Check syntax with lc-community-server"""
+        """Check syntax with lc-community-server."""
 
         cmd = [self.livecode_path, self.livecodelint_path, '-scope=.source.livecodescript',
             '-explicitVariables=' + str(self.explicit_vars).lower()]
