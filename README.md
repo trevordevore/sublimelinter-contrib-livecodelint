@@ -17,7 +17,20 @@ Before using this plugin, you must ensure that a LiveCode Server executable is i
 
 1. Download the version of `livecode-community-server` from [http://downloads.livecode.com](http://downloads.livecode.com) that you would like to use to check syntax. This plugin has been tested with LiveCode 8.
 2. Move the executable to a folder where SublimeLinter will be able to access it. For example, on OS X you might move the `livecode-community-server` file to the `/usr/local/bin` folder. DO NOT RENAME the executable.
-3. Configure settings as described below.
+3. Configure settings as described below in **Settings**.
+
+### Plugin installation
+Please use [Package Control][pc] to install the linter plugin. This will ensure that the plugin will be updated when new versions are available. If you want to install from source so you can modify the source code, you probably know what you are doing so we won’t cover that here.
+
+To install via Package Control, do the following:
+
+1. Within Sublime Text, bring up the [Command Palette][cmd] and type `install`. Among the commands you should see `Package Control: Install Package`. If that command is not highlighted, use the keyboard or mouse to select it. There will be a pause of a few seconds while Package Control fetches the list of available plugins.
+
+2. When the plugin list appears, type `livecodelint`. Among the entries you should see `SublimeLinter-contrib-livecodelint`. If that entry is not highlighted, use the keyboard or mouse to select it.
+
+### Manual Installation
+
+If you would like to manually install the plugin then place the `SublimeLinter-contrib-livecodelint ` folder in the Sublime Text user package folder. On OS X that folder is `~/Library/Application Support/Sublime Text 3/Packages`.
 
 ## Settings
 For general information on how SublimeLinter works with settings, please see [Settings][settings]. For information on generic linter settings, please see [Linter Settings][linter-settings].
@@ -75,19 +88,6 @@ After adding the above settings your user settings will look something like this
         },
         ...
 ```
-
-### Plugin installation
-Please use [Package Control][pc] to install the linter plugin. This will ensure that the plugin will be updated when new versions are available. If you want to install from source so you can modify the source code, you probably know what you are doing so we won’t cover that here.
-
-To install via Package Control, do the following:
-
-1. Within Sublime Text, bring up the [Command Palette][cmd] and type `install`. Among the commands you should see `Package Control: Install Package`. If that command is not highlighted, use the keyboard or mouse to select it. There will be a pause of a few seconds while Package Control fetches the list of available plugins.
-
-2. When the plugin list appears, type `livecodelint`. Among the entries you should see `SublimeLinter-contrib-livecodelint`. If that entry is not highlighted, use the keyboard or mouse to select it.
-
-### Manual Installation
-
-If you would like to manually install the plugin then place the `SublimeLinter-contrib-livecodelint ` folder in the Sublime Text user package folder. On OS X that folder is `~/Library/Application Support/Sublime Text 3/Packages`.
 
 ## Notes
 
