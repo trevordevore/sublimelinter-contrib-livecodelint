@@ -17,8 +17,8 @@ class Livecodelint(Linter):
     """Provides an interface to livecodelint."""
 
     syntax = ('livecode')
-    cmd = ['']
-    executable = 'livecode-community-server'
+    cmd = None
+    executable = None
     version_args = '--version'
     version_re = r'(?P<version>\d+\.\d+\.\d+)'
     version_requirement = ''
