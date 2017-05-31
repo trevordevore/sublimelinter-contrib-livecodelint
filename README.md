@@ -16,7 +16,7 @@ You will need to install the [LiveCode Package][livecode-package] before install
 Before using this plugin, you must ensure that a LiveCode Server executable is installed on your system. To install a version of LiveCode server, do the following:
 
 1. Download the version of `livecode-community-server` from [http://downloads.livecode.com](http://downloads.livecode.com) that you would like to use to check syntax. This plugin has been tested with LiveCode 8.
-2. Move the executable to a folder where SublimeLinter will be able to access it. For example, on OS X you might move the `livecode-community-server` file to the `/usr/local/bin` folder. DO NOT RENAME the executable.
+2. Move the executable to a folder where SublimeLinter will be able to access it. For example, on OS X you might move the `livecode-community-server` file to the `/usr/local/bin` folder.
 3. Configure settings as described below in **Settings**.
 
 ### Plugin installation
@@ -44,6 +44,8 @@ In addition to the standard SublimeLinter settings, livecodelint provides its ow
 
 To add these settings use the `Tools > SublimeLinter > Open User Settings` menu to open the user settings file. Add the following configuration text to the "linters" section:
 
+OS X:
+
 ```
 "livecodelint": {
     "@disable": false,
@@ -51,6 +53,18 @@ To add these settings use the `Tools > SublimeLinter > Open User Settings` menu 
     "excludes": [],
     "explicitvars": true,
     "livecode-server-path": "/usr/local/bin/livecode-community-server"
+}
+```
+
+Windows:
+
+```
+"livecodelint": {
+    "@disable": false,
+    "args": [],
+    "excludes": [],
+    "explicitvars": true,
+    "livecode-server-path": "C:/livecode-community-server.exe"
 }
 ```
 
