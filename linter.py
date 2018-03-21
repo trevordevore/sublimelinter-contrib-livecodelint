@@ -46,12 +46,12 @@ class Livecodelint(Linter):
 
         Linter.__init__(self, view, syntax)
 
+    def run(self, cmd, code):
+        """Check syntax with lc-community-server."""
+        
         self.livecode_path = self.get_view_settings().get('livecode-server-path')
         self.explicit_vars = self.get_view_settings().get('explicitvars')
         self.livecodelint_path = os.path.dirname(__file__) + '/livecodelint.lc'
-
-    def run(self, cmd, code):
-        """Check syntax with lc-community-server."""
 
         cmd = [
             self.livecode_path,
