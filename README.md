@@ -48,7 +48,7 @@ OS X:
 
 ```
 "livecodelint": {
-    "@disable": false,
+    "disable": false,
     "args": [],
     "excludes": [],
     "explicitvars": true,
@@ -60,7 +60,7 @@ Windows:
 
 ```
 "livecodelint": {
-    "@disable": false,
+    "disable": false,
     "args": [],
     "excludes": [],
     "explicitvars": true,
@@ -71,36 +71,18 @@ Windows:
 After adding the above settings your user settings will look something like this:
 
 ```
-"user": {
-        "debug": false,
-        "delay": 0.25,
-        "error_color": "D02000",
-        "gutter_theme": "Packages/SublimeLinter/gutter-themes/Default/Default.gutter-theme",
-        "gutter_theme_excludes": [],
-        "lint_mode": "background",
-        "linters": {
-            "flake8": {
-                "@disable": false,
-                "args": [],
-                "builtins": "",
-                "excludes": [],
-                "executable": "",
-                "ignore": "",
-                "jobs": "1",
-                "max-complexity": -1,
-                "max-line-length": null,
-                "select": "",
-                "show-code": false
-            },
-            "livecodelint": {
-                "@disable": false,
-                "args": [],
-                "excludes": [],
-                "explicitvars": true,
-                "livecode-server-path": "/usr/local/bin/livecode-community-server"
-            }
-        },
-        ...
+{
+  "show_panel_on_save": "view",
+  "linters": {
+    "livecodelint": {
+      "disable": false,
+      "args": [],
+      "excludes": [],
+      "explicitvars": true,
+      "livecode-server-path": "/usr/local/bin/livecode-community-server"
+    }
+  }
+}
 ```
 
 ## Notes
