@@ -35,12 +35,12 @@ If you would like to manually install the plugin then place the `SublimeLinter-c
 ## Settings
 For general information on how SublimeLinter works with settings, please see [Settings][settings]. For information on generic linter settings, please see [Linter Settings][linter-settings].
 
-In addition to the standard SublimeLinter settings, livecodelint provides its own settings. You configure these settings in the SublimeLinter User Settings file.
+You can change the default livecodelint behavior in the SublimeLinter User Settings file.
 
 |Setting|Description|
 |:------|:----------|
-|executable|The full path to the `livecode-community-server` file on your computer. This is only required if the executable cannot be located in PATH.|
 |explicitVariables|Set to "true" to have the linter ensure that variables are declared.|
+|executable|The full path to the `livecode-community-server` file on your computer. This is only required if the executable cannot be located in PATH.|
 
 To add these settings use the `Preferences > Packge Settings > SublimeLinter > Settings` menu to open the user settings file. Add the following configuration text to the "linters" section:
 
