@@ -39,10 +39,10 @@ In addition to the standard SublimeLinter settings, livecodelint provides its ow
 
 |Setting|Description|
 |:------|:----------|
-|livecode-server-path|The full path to the `livecode-community-server` file on your computer|
-|explicitvars|Set to true to have the linter ensure that variables are declared|
+|executable|The full path to the `livecode-community-server` file on your computer. This is only required if the executable cannot be located in PATH.|
+|explicitVariables|Set to "true" to have the linter ensure that variables are declared.|
 
-To add these settings use the `Tools > SublimeLinter > Open User Settings` menu to open the user settings file. Add the following configuration text to the "linters" section:
+To add these settings use the `Preferences > Packge Settings > SublimeLinter > Settings` menu to open the user settings file. Add the following configuration text to the "linters" section:
 
 OS X:
 
@@ -51,8 +51,8 @@ OS X:
     "disable": false,
     "args": [],
     "excludes": [],
-    "explicitvars": true,
-    "livecode-server-path": "/usr/local/bin/livecode-community-server"
+    "explicitVariables": "true",
+    "executable": "~/livecode-community-server"
 }
 ```
 
@@ -63,8 +63,8 @@ Windows:
     "disable": false,
     "args": [],
     "excludes": [],
-    "explicitvars": true,
-    "livecode-server-path": "C:/livecode-community-server.exe"
+    "explicitVariables": "true",
+    "executable": "C:/livecode-community-server.exe"
 }
 ```
 
@@ -78,8 +78,8 @@ After adding the above settings your user settings will look something like this
       "disable": false,
       "args": [],
       "excludes": [],
-      "explicitvars": true,
-      "livecode-server-path": "/usr/local/bin/livecode-community-server"
+      "explicitVariables": "true",
+      "executable": "C:/livecode-community-server.exe"
     }
   }
 }
