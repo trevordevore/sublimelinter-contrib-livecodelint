@@ -42,7 +42,7 @@ You can change the default livecodelint behavior in the SublimeLinter User Setti
 |explicitVariables|Set to "true" to have the linter ensure that variables are declared.|
 |executable|The full path to the `livecode-community-server` file on your computer. This is only required if the executable cannot be located in PATH.|
 
-To add these settings use the `Preferences > Packge Settings > SublimeLinter > Settings` menu to open the user settings file. Add the following configuration text to the "linters" section:
+To add these settings use the `Preferences > Package Settings > SublimeLinter > Settings` menu to open the user settings file. Add the following configuration text to the "linters" section:
 
 OS X:
 
