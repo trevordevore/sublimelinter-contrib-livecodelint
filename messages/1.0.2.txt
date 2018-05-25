@@ -1,0 +1,23 @@
+SublimeLinter-contrib-livecodelint
+-------------------------------
+
+** IMPORTANT! **
+
+Configuration settings have changed in version 1.0.2:
+
+* `explicitvars` is now `explicitVariables` and is set to a string rather than a boolean.
+* `livecode-server-path` is not `executable` and is only required if `livecode-community-server` is not in PATH.
+
+To update your settings open the preference file located in `Preferences > Package Settings > SublimeLinter > Settings`. Your new settings should look similar to this:
+
+```
+"livecodelint": {
+    "disable": false,
+    "args": [],
+    "excludes": [],
+    "explicitVariables": "true",
+    "executable": "~/livecode-community-server"
+}
+```
+
+If your copy of `livecode-community-server` is installed in `/usr/local/bin` then you can remove the `executable` setting from preferences.
