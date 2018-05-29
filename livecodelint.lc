@@ -101,7 +101,8 @@ command Lint
       split tErrors with return
       repeat with tIndex = 1 to the number of elements of tErrors
         split tErrors[tIndex] with ":"
-        write tErrors[tIndex][2], tErrors[tIndex][3], "[" & word 1 to -1 of tErrors[tIndex][4] & "]" & tErrors[tIndex][5] & linefeed to stdout
+        write tErrors[tIndex][2], tErrors[tIndex][3], \
+              "[" & word 1 to -1 of tErrors[tIndex][4] & "]" & tErrors[tIndex][5] & linefeed to stdout
       end repeat
       DeleteTempFile
     break

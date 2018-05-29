@@ -31,6 +31,7 @@ class Livecodelint(Linter):
         '-explicitVariables=': False
     }
 
+
 class LivecodeBuilderlint(Linter):
     """Provides an interface to livecodelint."""
 
