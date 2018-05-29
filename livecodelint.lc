@@ -23,18 +23,18 @@ command Lint
         split theArgument[2] with ";"
         repeat with tIndex = 1 to the number of elements in theArgument[2]
           if there is a folder theArgument[2][tIndex] then
-            put " --modulepath " & theArgument[2][tIndex] after tModulePaths
+            put " --modulepath " & q(theArgument[2][tIndex]) after tModulePaths
           end if
         end repeat
         break
       case "-lcCompile"
-        put theArgument[2] into tLCCompile
+        put q(theArgument[2]) into tLCCompile
         break
       case "-filepath"
         set the itemDelimiter to slash
         put item -1 of theArgument[2] into tFilename
         put item 1 to -2 of theArgument[2] & "/.lci" into tLCIDirectory
-        put " --modulepath " & tLCIDirectory before tModulePaths
+        put " --modulepath " & q(tLCIDirectory) before tModulePaths
         set the itemDelimiter to comma
         break
     end switch
@@ -96,11 +96,12 @@ command Lint
         create folder tLCIDirectory
       end if
       SaveToTempFile tScript
+      write tLCCompile & tModulePaths & " -- " & sTempFile & linefeed to stdout
       put shell(tLCCompile & tModulePaths & " -- " & sTempFile) into tErrors
       split tErrors with return
       repeat with tIndex = 1 to the number of elements of tErrors
         split tErrors[tIndex] with ":"
-        write tErrors[tIndex][2], tErrors[tIndex][3], tErrors[tIndex][4] & linefeed to stdout
+        write tErrors[tIndex][2], tErrors[tIndex][3], "[" & word 1 to -1 of tErrors[tIndex][4] & "]" & tErrors[tIndex][5] & linefeed to stdout
       end repeat
       DeleteTempFile
     break
@@ -118,6 +119,10 @@ end SaveToTempFile
 command DeleteTempFile
   delete file sTempFile
 end DeleteTempFile
+
+private function q pParam
+  return quote & pParam & quote
+end q
 
 command scriptExecutionError pStack, pFiles
   split pStack with return

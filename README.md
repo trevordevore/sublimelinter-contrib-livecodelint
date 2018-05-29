@@ -35,6 +35,8 @@ If you would like to manually install the plugin then place the `SublimeLinter-c
 ## Settings
 For general information on how SublimeLinter works with settings, please see [Settings][settings]. For information on generic linter settings, please see [Linter Settings][linter-settings].
 
+## LiveCode Script Settings
+
 You can change the default livecodelint behavior in the SublimeLinter User Settings file.
 
 |Setting|Description|
@@ -82,6 +84,51 @@ After adding the above settings your user settings will look something like this
       "executable": "C:/livecode-community-server.exe"
     }
   }
+}
+```
+
+## LiveCode Builder Settings
+
+To use the LiveCode Builder linter add a `livecodebuilderlint` entry to the SublimeLinter settings file. There are two properties you need to configure.
+
+|Setting|Description|
+|:------|:----------|
+|lcCompile|The path to the `lc-compile` executable. This executable is part of the LiveCode installation. The path will look something like this: `/Applications/LiveCode Business 9.0.0.app/Contents/Tools/Toolchain/lc-compile`.|
+|modulePaths|The path(s) to any directories containing `lci` files. Each directory is separated by the `;` character. At a minimnum you should include the path to the lci files that ship with LiveCode and lci files that have been installed in your version of the IDE. The path will look something like this: `/Applications/LiveCode Business 9.0.0.app/Contents/Tools/Toolchain/modules/lci;/Users/trevordevore/Dropbox/LiveCode/Extensions/interface`.|
+
+To add these settings use the `Preferences > Package Settings > SublimeLinter > Settings` menu to open the user settings file. Add the following configuration text to the "linters" section:
+
+```
+"livecodebuilderlint": {
+    "disable": false,
+    "args": [],
+    "excludes": [],
+    "lcCompile": "/Applications/LiveCode Business 9.0.0.app/Contents/Tools/Toolchain/lc-compile",
+    "modulePaths": "/Applications/LiveCode Business 9.0.0.app/Contents/Tools/Toolchain/modules/lci;/Users/USERNAME/Dropbox/LiveCode/Extensions/interface"
+}
+```
+
+## Customizing Settings for a Project
+
+If you need to customize any settings on a per-project basis edit the project settings file and add a SublimeLinter > linters > livecodelint/livecodebuilderlint entry. You will find an example of the syntax below. Note that you must define every search path for `modulePaths`. The value from the main preference file will not be inherited.
+
+```
+{
+    "folders":
+    [
+        {
+            "path": "."
+        }
+    ],
+    "SublimeLinter":
+    {
+        "linters":
+        {
+            "livecodebuilderlint": {
+                "modulePaths": ...
+            }
+        }
+    }
 }
 ```
 

@@ -30,3 +30,19 @@ class Livecodelint(Linter):
         '-scope=': '.source.livecodescript',
         '-explicitVariables=': False
     }
+
+class LivecodeBuilderlint(Linter):
+    """Provides an interface to livecodelint."""
+
+    cmd = ('livecode-community-server', LIVECODE_SCRIPT, '$args')
+    regex = r'(?P<line>\d+),(?P<col>\d+),(?P<message>.+)'
+    multiline = False
+    line_col_base = (1, 1)
+    word_re = None
+
+    defaults = {
+        'selector': 'source.livecodebuilder',
+        '-scope=': '.source.lcb',
+        '-lcCompile=': '',
+        '-modulePaths=': ''
+    }
