@@ -95,6 +95,7 @@ To use the LiveCode Builder linter add a `livecodebuilderlint` entry to the Subl
 |:------|:----------|
 |lcCompile|The path to the `lc-compile` executable. This executable is part of the LiveCode installation. The path will look something like this: `/Applications/LiveCode Business 9.0.0.app/Contents/Tools/Toolchain/lc-compile`.|
 |modulePaths|The path(s) to any directories containing `lci` files. Each directory is separated by the `;` character. At a minimnum you should include the path to the lci files that ship with LiveCode and lci files that have been installed in your version of the IDE. The path will look something like this: `/Applications/LiveCode Business 9.0.0.app/Contents/Tools/Toolchain/modules/lci;/Users/trevordevore/Dropbox/LiveCode/Extensions/interface`.|
+|executable|The full path to the `livecode-community-server` file on your computer. This is only required if the executable cannot be located in PATH.|
 
 To add these settings use the `Preferences > Package Settings > SublimeLinter > Settings` menu to open the user settings file. Add the following configuration text to the "linters" section:
 
@@ -104,7 +105,8 @@ To add these settings use the `Preferences > Package Settings > SublimeLinter > 
     "args": [],
     "excludes": [],
     "lcCompile": "/Applications/LiveCode Business 9.0.0.app/Contents/Tools/Toolchain/lc-compile",
-    "modulePaths": "/Applications/LiveCode Business 9.0.0.app/Contents/Tools/Toolchain/modules/lci;/Users/USERNAME/Dropbox/LiveCode/Extensions/interface"
+    "modulePaths": "/Applications/LiveCode Business 9.0.0.app/Contents/Tools/Toolchain/modules/lci;/Users/USERNAME/Dropbox/LiveCode/Extensions/interface",
+    "executable": "~/livecode-community-server"
 }
 ```
 
